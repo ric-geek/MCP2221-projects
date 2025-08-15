@@ -1,0 +1,8 @@
+.idea
+obj
+Properties
+*.bak
+*.dll
+*.user
+*.exe
+*.pdb
