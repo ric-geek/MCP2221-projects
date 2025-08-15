@@ -10,8 +10,11 @@ namespace blink
         {
 
             uint device = 0;
-            uint pid = 221;
-            uint vid = 1240;
+            
+            // Default values
+            uint vid = 0x4D8;
+            uint pid = 0xDD;
+            
             int result;
             byte sram = MCP2221.M_RUNTIME_SETTINGS;
             byte[] pinFunctions = new byte[4];
@@ -35,7 +38,12 @@ namespace blink
             var handleChip = MCP2221.M_Mcp2221_OpenByIndex(vid, pid, device-1);
             
             // Read GPIO configuration
-            result = MCP2221.M_Mcp2221_GetGpioSettings(handleChip, 1, pinFunctions, pinDirections, outputValues);
+            result = MCP2221.M_Mcp2221_GetGpioSettings(handleChip, sram, pinFunctions, pinDirections, outputValues);
+            
+            if (result != MCP2221.M_E_NO_ERR)
+            {
+                Console.WriteLine("Error {0}", result);
+            }
 
             pinFunctions[0] = MCP2221.M_MCP2221_GPFUNC_IO; // GP0 set as GPIO
             pinDirections[0] = MCP2221.M_MCP2221_GPDIR_OUTPUT; // GP0 configured as output
