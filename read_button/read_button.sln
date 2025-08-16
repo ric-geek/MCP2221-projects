@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "read_button", "read_button\read_button.csproj", "{ED43B3C2-D19E-401B-AEF7-D7C1A97B3655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED43B3C2-D19E-401B-AEF7-D7C1A97B3655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED43B3C2-D19E-401B-AEF7-D7C1A97B3655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED43B3C2-D19E-401B-AEF7-D7C1A97B3655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED43B3C2-D19E-401B-AEF7-D7C1A97B3655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
